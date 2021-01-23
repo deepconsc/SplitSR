@@ -26,7 +26,7 @@ if __name__ == '__main__':
     for alpha in block_alphas:
         block = SplitSRBlock(128, 3, alpha)
 
-        x = torch.randn(1, 256, 112, 112)
+        x = torch.randn(1, 128, 112, 112)
         y = block(x)
 
         assert y.shape == x.shape
