@@ -17,7 +17,7 @@ class SplitSRBlock(nn.Module):
         active = self.conv(active)
         active = self.batchnorm(active)
         active = self.relu(active)
-        x = torch.cat([active, passive], dim=1)
+        x = torch.cat([passive, active], dim=1)
         return x
 
 if __name__ == '__main__':
